@@ -1,0 +1,446 @@
+<style>
+body {
+	background: #6ea7b7;
+	overflow: hidden;
+	text-align: left;
+}
+table {
+	display: none;
+}
+#main table {
+	display: table;
+}
+body, td {
+	font: 7pt verdana;
+	color: #333;
+}
+a, a:visited {
+	font: bold 6pt arial;
+	color: #80A0DF;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+i {
+	font: italic 7pt arial;
+	color: #aaa;
+	letter-spacing: 1px;
+}
+strong {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: helvetica neue,helvetica,arial;
+	font-size: 6.5pt;
+	letter-spacing: 2px;
+}
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: helvetica neue,helvetica,arial;
+	font-size: 6.5pt;
+	color: #AEB2CF;
+	letter-spacing: 2px;
+	padding-bottom: 2px;
+	border-bottom: 1px dashed #EEEEEE;
+}
+h3 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #ADC6CF;
+	letter-spacing: 2px;
+}
+li {
+	list-style-image: url("http://i.imgur.com/IzR6Uj1.png");
+}
+.divide {
+	display: table;
+	width: 100%;
+}
+.divide .half {
+	display: table-cell;
+	width: 50%;
+}
+strong.left {
+	text-align: left;
+}
+.marginpls img {
+	margin: 2px;
+}
+
+#bg {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -999;
+}
+#body {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+#main {
+	top: 100%;
+	left: 50%;
+	width: 900px;
+	margin-left: -450px;
+	padding: 50px 0 100px 0;
+}
+
+.bigtitle {
+	display: block;
+	height: 60px;
+	margin: -60px auto 0 auto;
+}
+.title {
+	display: block;
+	height: 60px;
+	margin: -62px auto 0 auto;
+}
+	.titleintro {
+	display: block;
+	height: 300px;
+	margin: -225px auto 0 auto;
+}
+.box {
+	width: 840px;
+	margin-bottom: 50px;
+	background: #fff;
+}
+.divideinhalf, .divideinthirds, .divide6040 {
+	display: table;
+	width: 1000px;
+	border-spacing: 50px 0;
+	margin: 0 0 50px -50px;
+}
+.divideinhalf, .divideinthirds {
+	table-layout: fixed;
+}
+.box, .left, .middle, .right, .d60, .d40 {
+	padding: 30px;
+}
+.left, .middle, .right, .d60, .d40, .d40special {
+	display: table-cell;
+	vertical-align: top;
+	background: #fff;
+	height: 100%;
+}
+.divideinthirds .left, .divideinthirds .middle, .divideinthirds .right {
+	width: 100px;
+}
+.divideinhalf .left, .divideinhalf .right {
+	width: 100px;
+}
+.left, .middle, .right {
+	width: inherit;
+}
+.d60 {
+	width: 300px;
+}
+.d40, .d40special {
+	width: 300px;
+}
+.d40special {
+	background: none !important;
+	padding: -blocked- !important;
+}
+.d40special .box {
+	width: auto;
+}
+div.imglist {
+	display: table;
+	margin-top: 10px;
+	border-collapse: collapse;
+}
+ul.imglist {
+	display: table-row;
+	padding: 0;
+}
+ul.imglist li {
+	display: table-cell;
+	vertical-align: middle;
+	list-style: none;
+	text-align: left;
+}
+ul.imglist li.img {
+	width: 40px;
+	padding-bottom: 10px;
+}
+ul.imglist li.img img {
+	width: 40px;
+	height: auto;
+}
+ul.imglist li.descr {
+	padding: 0 20px 10px 10px;
+	width: 150px;
+	font: italic 6pt georgia;
+}
+.avatars {
+	margin: 10px 0;
+}
+.avatars img {
+	margin: 5px;
+}
+ul.blocklist {
+	padding-left: 0;
+	width: 100%;
+	border-spacing: 2px;
+	border-collapse: separate;
+	margin: -2px;
+}
+ul.blocklist li {
+	display: block;
+	text-align: center;
+	width: 100%;
+	list-style-type: none;
+	background: #F2F0FE;
+	padding: 5px;
+	margin-left: 0;
+	margin-bottom: 5px;
+	font-size: 6pt;
+}
+table.pets {
+	margin: 20px 0;
+	border-spacing: 20px 0px;
+}
+table.pets td {
+	vertical-align: top;
+	text-align: center;
+}
+table.pets td img {
+	width: 130px;
+	height: auto;
+	border: 5px solid #efefef;
+	background: #efefef;
+}
+table.pets td .petpet {
+	font-size: 6.5pt;
+	display: none;
+}
+table.pets td .petpet img {
+	width: 40px;
+	height: 40px;
+	border: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+table.pets td .petpet i {
+	font-size: 6.5pt;
+}
+span.petimg span.hoverpet {
+	visibility: hidden;
+	top: -131px;
+	left: 0px;
+}
+span:hover.petimg span.hoverpet {
+	visibility: visible;
+}
+.dreamies {
+	margin-top: 30px;
+	width: 100%;
+	text-align: left;
+}
+.dreamies div, .dreamies img {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.dreamies img {
+	width: 100px;
+	height: auto;
+	margin: 0px -10px;
+}
+table.imagegrid {
+	margin: 10px 0px 20px 0px;
+}
+table.imagegrid td {
+	vertical-align: top;
+	width: 56px;
+	font-size: 5.5pt;
+	padding: 5px;
+	text-align: center;
+	text-transform: lowercase;
+}
+table.imagegrid td img {
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	border: 1px solid #efefef;
+	margin-bottom: 2px;
+}
+table.imagegrid td a img:hover {
+	border: 3px solid #efefef;
+	padding: 3px;
+}
+.pr {
+	font-family: courier new;
+	color: #787878;
+	text-transform: uppercase;
+	display: block;
+	margin-top: 2px;
+}
+td.strikethrough {
+	color: #aaa;
+	text-decoration: line-through;
+}
+	#pet img, #pet2 img {
+	width: 100%;
+}
+#pet2 {
+	background: #fff;
+	border: 2px dashed #eee4fa;
+	display: inline-block;
+	height: 125px;
+	margin: 2px;
+	overflow: hidden;
+	padding: 10px;
+	text-align: center;
+	width: 70px;
+}
+.pp {
+	margin-top: 10px;
+	width: 50% !important;
+}
+</style>
+
+<div id="body" style="position: fixed;">
+<div style="position: fixed; top: 10px; left: 10px;">
+<div style="border-radius: 20px; font-size: 10px; background: url('http://i.imgur.com/7zMHH1B.png'); padding: 12px;">
+NOTEPAD [<a href="https://github.com/trsilver/npc/edit/main/index.html">edit</a>]<br><br>
+	<ul><li><a href="https://neopetsclassic.com/userlookup/?user=ali">my npc account</a></li>
+		<li><a href="https://toyhou.se/alii">toyhouse</a></li>
+		<li><a href="https://trsilver.github.io/npcplanner/ali.html">userlookup template</a></li></ul>
+<br>
+	<br>
+	GOALS
+	<ul>
+		<li>tys - alien zap</li>
+		<li>kotone -plushie pb</li>
+		<li>ping - plushie pb</li>
+		<li>shatter - grey pb/zap</li>
+		<li>manga - plushie aisha mp</li>
+		<li>akihabara - robot zap</li>
+		<li>tsuku - grey pb</li>
+	</div></div>
+
+<img src="http://i.imgur.com/Cllhw6c.jpg" id="bg" style="position: fixed;"><img src="http://i.imgur.com/O0roIRV.png" id="title" style="position: absolute;"><div id="main" style="position: absolute;">
+
+<div class="box" style="border-radius: 10px;">
+<img class="titleintro" id="ABOUT" src="http://i.imgur.com/O0roIRV.png"><strong>overview</strong><br><div class="divide">
+<div class="half" style="padding-right: 15px;">
+	<img style="float: left; margin: 0px 15px 15px 0px;" src="http://i.imgur.com/ayMaJZ9.png" width="20%"><br>hi i'm ali! i'm really into video games, music, and manga. outside of neo i work full-time as a web/ux designer. i'm also a musician and previously was a music major! funnily enough neo is what got me initially into coding and design as a kid. i use neo as a creative outlet and will be playing it forever. <br><br><center>my <b>main account</b> is <a href="https://neopetsclassic.com/userlookup/?user=ali">ali</a><center><br><img src="http://i.imgur.com/0eGM2nr.gif" width="10%"></center>
+
+</center></center></div>
+<div class="half"><div style="padding: 10px;"><br>
+<strong>on neo</strong>
+<ul class="noindent"><li>my favorite thing to do on neo is work on my pet's characters and petpages!</li>
+<li>i'm a big avatar collector!</li>
+<li>i like searching the pound for pets and feeding kads!</li>
+<li>i enjoy reading books to my xweetok carie, currently working towards bbooks gold!</li>
+</ul></div>
+</div></div>
+
+
+</div>
+
+
+
+
+<div class="box" style="border-radius: 10px;">
+<img class="title" id="NEOFAMILY" src="http://i.imgur.com/lH8V4jH.png"><center>
+	<br><br>
+<div id="pet2">
+  	<img src="https://neopetsclassic.com/images/pets/Shoyru/80by80/shoyru_royalgirl_happy.gif"><br>
+    jlup
+
+    <br><img class="pp" src="http://images.neopets.com/items/petpet_robo_griefer.gif"><br></div>
+  <div id="pet2">
+  	<img src="https://neopetsclassic.com/images/pets/Cybunny/80by80/cybunny_royalboy_happy.gif"><br>
+    Ryu
+	
+    <br><img class="pp" src="https://images.neopets.com/items/med_petpet_3.gif"><br></div>
+  
+  <div id="pet2">
+  	<img src="https://neopetsclassic.com/images/pets/Xweetok/80by80/xweetok_fire_happy.gif"><br>
+    Typhlosion
+    <br><img class="pp" src="https://www.neopetsclassic.com/images/items/spooky_petpet_fire.gif"><br></div>
+  <div id="pet2">
+  	<img src="https://neopetsclassic.com/images/pets/Xweetok/80by80/xweetok_pirate_happy.gif"><br>
+    Carie
+
+    <br><img class="pp" src="http://images.neopets.com/items/mazzew_black.gif"><br></div>
+  <div id="pet2">
+  	<img src="https://bookofages.jellyneo.net/assets/imgs/species/replaced/grundo/1_faerie.gif"><br>
+    Spork
+    <br><img class="pp" src="http://images.neopets.com/items/hasee_orange.gif"><br></div>
+  <div id="pet2">
+  	<img src="https://neopetsclassic.com/images/pets/Hissi/80by80/hissi_desert_happy.gif"><br>
+    Onmy
+
+    <br><img class="pp" src="http://images.neopets.com/items/meepit_glowing.gif"><br></div>
+<div id="pet2">
+  	<img src="https://neopetsclassic.com/images/pets/Lupe/80by80/lupe_grey_happy.gif"><br>
+    Roof
+
+    <br><img class="pp" src="https://images.neopets.com/items/snowbunny_grey.gif"><br></div>
+ 
+  
+  <div id="pet2">
+  	<img src="https://bookofages.jellyneo.net/assets/imgs/species/replaced/kougra/1_faerie.gif"><br>
+    Miho
+    <br><img class="pp" src="https://images.neopets.com/items/doglefox_faerie.gif"><br></div>
+ 
+	
+				
+					
+	
+	          
+		 					 
+	<br><br>
+
+
+</div>
+
+<div class="box" style="border-radius: 10px;">
+<img class="title" id="WISHLIST" src="http://i.imgur.com/PddoIea.png"><div class="divide">
+<div class="half">
+<h2>customization</h2>
+
+<center>
+<table class="imagegrid"><tr><td><img src="//images.neopets.com/items/mall_tot_scythe.gif"><br>Toy Scythe of Dread
+<font class="pr">2-3</font></td>
+<td><img src="//images.neopets.com/items/pot_kyrii_fire.gif"><br>Fire Kyrii Morphing Potion
+<font class="pr">150k</font></td>
+
+
+</tr></table></center>
+
+</div>
+
+
+<div class="half">
+
+<h2>book wishlist</h2>
+<table class="imagegrid"><center><br><i>items.jellyneo.net/mywishes/megali2378/228618/</i></center>
+
+</table></div>
+</div>
+
+</div>
+
+
+
+
+<div class="box" style="border-radius: 10px;">
+<img class="title" id="Sitely" src="http://i.imgur.com/vihcIwo.png"><center><div class="marginpls" style="margin-top: 5px;">
+<br><a href="/~CarieAnne"><img src="http://i.imgur.com/6FXYryZ.gif"></a>
+<br><textarea><a href="/~CarieAnne"><img src="http://i.imgur.com/6FXYryZ.gif"></a></textarea><p>Button created by <a href="//www.neopets.com/~Greeeeen_a11">Simplified</a></p></div></center>
+
+</div>
+
+</div>
+</div><br><br><br><BR><BR><BR>
